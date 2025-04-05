@@ -454,7 +454,7 @@ svg {
   border-radius: 2.5rem;
   font: var(--h3-font-size);
   font-weight: var(--font-medium);
-  z-index: 9999;
+  z-index: var(--z-fixed);
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   transition: background-color 0.4s ease;
 }
@@ -463,6 +463,9 @@ svg {
   background-color: var(--first-color-alt);
 }
 
+.home__button{
+  padding: 1rem 4rem;
+}
 
 /*=============== FEATURES ===============*/
 .feature__container{
@@ -496,6 +499,18 @@ svg {
   transition: all 0.5s;
 }
 
+.feature__title{
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: var(--mb-0-5);
+}
+
+.feature__description{
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+  margin-bottom: var(--mb-1-5);
+}
+
 .feature__data:hover{
   scale: 1.02;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
@@ -505,16 +520,52 @@ svg {
   display: grid;
   gap: 1rem;
 }
+
 .feature_icon-shape{
  margin-bottom: var(--mb-1-5);
 }
 
-.feature__icon{
+.icon1{
   padding: 1rem;
-  font-size: 2rem;
+  font-size: 1.25rem;
   color: var(--title-color);
-  border: 1px solid var(--title-color);
+  background: #EDF2FF;
   border-radius: 50%;
+}
+
+.one i{
+  color: #3B82F6;
+}
+
+.icon2{
+  padding: 1rem;
+  font-size: 1.25rem;
+  color: var(--title-color);
+  background: #FFECF2;
+  border-radius: 50%;
+}
+.two i{
+  color: #FA457E;
+}
+.icon3{
+  padding: 1rem;
+  font-size: 1.25rem;
+  color: var(--title-color);
+  background: #F0F9FF;
+  border-radius: 50%;
+}
+.three i{
+  color: #57DEFF;
+}
+.icon4{
+  padding: 1rem;
+  font-size: 1.25rem;
+  color: var(--title-color);
+  background: #FFF9EB;
+  border-radius: 50%;
+}
+.four i{
+  color: #FDC53A;
 }
 
 
@@ -597,9 +648,53 @@ svg {
 }
 
 
-/*=============== PROJECTS ===============*/
+/*=============== THANK YOU PAGE ===============*/
+.thank_you__container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
 
+.thank_you__title {
+  font-size: 2.5em;
+  color: #4b2e83;
+  margin-bottom: 10px;
+}
 
+.thank_you__description {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.thank_you__socials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.thank_you__socials a {
+  text-decoration: none;
+  color: #4b2e83;
+  font-size: 1.5em;
+  transition: color 0.3s;
+}
+.thank_you__socials a:hover {
+  color: #7a4b9d;
+}
+.thank_you__socials i {
+  font-size: 2em;
+}
+.thank_you__socials i:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s;
+}
+
+.quote {
+  margin-top: 30px;
+  font-style: italic;
+  color: #555;
+}
 /*=============== CONTACT ===============*/
 
 
@@ -827,13 +922,45 @@ svg {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem 4rem;
   border-radius: 2rem;
   background-color: var(--container-color);
-  border-color: #D9D9D9;
+  border: 1px solid #D9D9D9;
   overflow: hidden;
 }
 
+/* Add the white line animation */
+.nav__menu::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid white;
+  border-radius: 2rem;
+  box-sizing: border-box;
+  animation: move-line 4s linear infinite;
+}
+
+/* Keyframes for the white line animation */
+@keyframes move-line {
+  0% {
+    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+  }
+  25% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+  }
+  50% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%);
+  }
+  75% {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+  100% {
+    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+  }
+}
 
 
   .home__data{
@@ -848,8 +975,10 @@ svg {
     margin-bottom: var(--mb-0-5);
   }
 
-  home__description{
+  .home__description{
     width: 500px;
+    display: block;
+    margin: 0 auto;
   }
 
   .home__container {
