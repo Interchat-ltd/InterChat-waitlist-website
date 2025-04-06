@@ -5,85 +5,146 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
       <!--=============== FAVICON ===============-->
-      <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
+      <link rel="shortcut icon" href="assets/img/logomain.png" type="image/x-icon">
 
         <!--=============== BOXICONS ===============-->
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
         <!--=============== SWIPER CSS ===============-->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css"/>
 
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="/assets/css/styles.css">
+        <link rel="stylesheet" href="/assets/css/tstyle.css">
 
         <title> 🎉 Thank you</title>
     </head>
         <body>
         <!--=============== HEADER ===============-->
-        <header class="header" id="header">
-            <nav class="nav container">
-                <div class="nav__logo">
-                    <img src="assets/img/logomain.png" class="nav__logo-img" alt="">
-                    <a href="#" class="nav__title">InterChat</a>
-                </div>
-
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                            <a href="#home" class="nav__link active-link">Home</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#features" class="nav__link">Features</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#contact" class="nav__link">Contact</a>
-                        </li>
-                    </ul>
-
-                    <!--=============== NAV TOGGLE ===============-->
-                    <div class="nav__close" id="nav-close">
-                        <i class="bx bx-x"></i>
+        <header class="ttimer__header" id="ttimer">
+            <div class="ttimer__container container">
+                <h2 class="ttimer__title">LAUNCHING IN</h2>
+                <div class="ttimer" id="ttimer__timer">
+                    <div>
+                        <h2 class="ttimer__number" id="days">0</h2>
+                        <span class="ttimer__title">Days</span>
+                    </div>
+                    <div>
+                        <h2 class="ttimer__number" id="hours">0</h2>
+                        <span class="ttimer__title">Hours</span>
+                    </div>
+                    <div>
+                        <h2 class="ttimer__number" id="minutes">0</h2>
+                        <span class="ttimer__title">Minutes</span>
+                    </div>
+                    <div>
+                        <h2 class="ttimer__number" id="seconds">0</h2>
+                        <span class="ttimer__title">Seconds</span>
                     </div>
                 </div>
-
-                <div class="nav__btn">
-                    <!--=============== NAV TOGGLE ===============-->
-                    <div class="nav__toggle" id="nav-toggle">
-                        <i class="bx bx-grid-alt"></i>
-                    </div>
-
-                    <a class="button nav__button" id="nav__button">Join the waitlist</a>
-
-                </div>
-            </nav>
+            </div>
         </header>
 
 
 
         <!--==================== HERO ====================-->
-        <section class="thank_you section" id="thank_you">
+        <section class="thank_you section">
             <div class="thank_you__container container grid">
-                <h1 class="thank_you__title">🎉 Thank You for Signing Up!</h1>
-                <p class="thank_you__description">You’re officially on the <strong>InterChat waitlist</strong> 🙌</p>
-                <p class="thank_you__description">We’re excited to welcome you to our growing faith community.</p>
-                <p class="thank_you__description">📬 <strong>Please check your email</strong> for confirmation and further updates.</p>
-                <p class="thank_you__description">If you have any questions or just want to say hi, reply to that email — we’d love to hear from you!</p>
-            
-                <div class="thank_you__socials">
-                    <p class="socials__description">📲 Follow us and stay connected:</p>
-                    <a href="#">Instagram</a>
-                    <a href="#">Twitter</a>
-                    <a href="#">Facebook</a>
+                <div class="thank_you__data">
+                    <h1 class="thank_you__title">Thank You for Signing Up! 🎉</h1>
+                    <p class="thank_you__description">You are officially on the <strong>InterChat waitlist</strong> 🙌 </p> <br>
+                    <p class="thank_you__description2">We are thrilled to have you join our community of believers. <br>
+                        We are excited to welcome you to our growing faith community. <strong>Please check your email</strong> for confirmation and further updates.<br> 
+                        If you have any questions or just want to say hi, reply to that email — we would love to hear from you!
+                    </p>
+                
+                    <div class="thank_you__socials">
+                        <p class="socials__description">Follow us and stay connected:</p>
+                        <div class="t__links">
+                            <a href="#"><i class='bx bxl-instagram social__link'></i></a>
+                            <a href="#"><i class='bx bxl-twitter social__link'></i></a>
+                            <a href="#"><i class='bx bxl-facebook social__link'></i></a>
+                        </div>
+                    </div>
+                
+                    <p class="quote">“For where two or three gather in My name, there am I with them.”<br>– Matthew 18:20</p>
+                    <a href="index.html" class="button thank_you__button">
+                        <i class='bx bx-arrow-back'></i>
+                        Back to home
+                    </a>
+
                 </div>
-            
-                <p class="quote">“For where two or three gather in My name, there am I with them.”<br>– Matthew 18:20</p>
-            
-                <div class="thank_you__actions">
-                    <a href="/">← Back to Home</a>
-                    <a href="#">📤 Share InterChat</a>
+
+                <div class="swiper hero-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="t__card swiper-slide">
+                            <img src="assets/img/people1.jpg" class="card__image" alt="Feature 1">
+                            <div class="card__data">
+                                <h3 class="card__title">Connect with Friends</h3>
+                                <p class="card__description">Stay connected with your faith community anytime, anywhere.</p>
+                            </div>
+                        </div>
+
+
+                        <div class="t__card swiper-slide">
+                            <img src="assets/img/people2.jpg" class="card__image" alt="Feature 2">
+                            <div class="card__data">
+                                <h3 class="card__title">Group Chats</h3>
+                                <p class="card__description">Engage in meaningful conversations with like-minded individuals.</p>
+                            </div>
+                        </div>
+
+
+                        <div class="t__card swiper-slide">
+                            <img src="assets/img/people3.jpg" class="card__image" alt="Feature 3">
+                            <div class="card__data">
+                                <h3 class="card__title">Daily Devotionals</h3>
+                                <p class="card__description">Receive daily inspiration to strengthen your faith journey.</p>
+                                <div class="card__socials">
+                                    <a href="#"><i class='bx bxl-instagram card__link'></i></a>
+                                    <a href="#"><i class='bx bxl-twitter card__link'></i></a>
+                                    <a href="#"><i class='bx bxl-facebook card__link'></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Swiper Navigation -->
+                          <!-- If we need navigation buttons -->
+                        <div class="carousel__control">
+                            <div class="swiper-button-prev">
+                                <i class="bx bx-left-arrow-alt"></i>
+                            </div>
+                            <div class="swiper-button-next">
+                                <i class="bx bx-right-arrow-alt"></i>
+                            </div>
+                        </div>
+                    <!-- Swiper Pagination -->
+                    <div class="swiper-pagination"></div>
                 </div>
+                
 
 
             </div>
         </section>
         <!--==================== FOOTER ====================-->
+
+        <!-- Add this script to your thank_you.html -->
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+        <script>
+            // Trigger confetti animation
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        </script>
+
+        <!--=============== SWIPER JS ===============-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+        
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/thankyou.js"></script>
+
     </body>

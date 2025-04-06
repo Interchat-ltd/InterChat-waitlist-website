@@ -171,38 +171,49 @@ const contactForm = document.getElementById('myform'),
 const sendMail = (e) =>{
     e.preventDefault()
 
+        // Show the loading spinner
+        const loadingSpinner = document.getElementById('loading-spinner');
+        loadingSpinner.classList.add('active');
+    
+
         //ServiceID - templateID - #form - publicKey
     emailjs.sendForm('service_hf05elj', 'template_5a5zqkw', '#myform', 'wEI9A4RRU34gRgARh')
     .then(() =>{
+
+        // Hide the loading spinner
+        loadingSpinner.classList.remove('active');
+
         //show Message
-        contactMessage.textContent = 'Thank you for joining InterChat 😄'
+        // contactMessage.textContent = 'Thank you for joining InterChat 😄'
 
         //remove message after five seconds
-        setTimeout(()=>{
-            contactMessage.textContent =''
-        }, 2000)
+        // setTimeout(()=>{
+        //   contactMessage.textContent =''
+        // }, 2000)
 
         //Clear input field
         contactForm.reset();
 
         //Close form
         setTimeout(()=>{
-            closeForm.style.display = "none";
-        }, 4000)
+            window.location.href = 'thank_you.html';
+        }, 2000)
 
         
-    },  () =>{
-        //Show error Message
-        contactMessage.textContent = 'Message not sent (service error) 😞'
-        //remove message after five seconds
+    })  
+    .catch(() =>{
+        // Hide the loading spinner
+        loadingSpinner.classList.remove('active');
+
+        // Show error message
+        contactMessage.textContent = 'Message not sent (service error) 😞';
+
         setTimeout(()=>{
             contactMessage.textContent =''
         }, 2000)
-    }
+    });
 
-    )
-
-}
+};
 
 contactForm.addEventListener('submit', sendMail)
 
