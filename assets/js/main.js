@@ -217,3 +217,39 @@ const sendMail = (e) =>{
 
 contactForm.addEventListener('submit', sendMail)
 
+
+/*=============== Function to animate the count ===============*/
+
+const animateCount = (element, start, end, duration) => {
+    let startTime = null;
+
+    const step = (timestamp) => {
+        if (!startTime) startTime = timestamp;
+        const progress = Math.min((timestamp - startTime) / duration, 1);
+        const currentValue = Math.floor(progress * (end - start) + start);
+        element.textContent = currentValue.toLocaleString(); // Format number with commas
+        if (progress < 1) {
+            window.requestAnimationFrame(step);
+        }
+    };
+
+    window.requestAnimationFrame(step);
+};
+
+// Function to reveal the banner and start the count
+const revealBanner = () => {
+    const bannerTitle = document.querySelector('.banner__title');
+    const countNumber = document.getElementById('count-number');
+
+    const bannerPosition = bannerTitle.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.2;
+
+    if (bannerPosition < screenPosition) {
+        bannerTitle.classList.add('reveal');
+        animateCount(countNumber, 0, 10000, 4000); // Count from 0 to 10,000 in 8 seconds
+        window.removeEventListener('scroll', revealBanner); // Remove event listener after animation
+    }
+};
+
+// Add scroll event listener
+window.addEventListener('scroll', revealBanner);

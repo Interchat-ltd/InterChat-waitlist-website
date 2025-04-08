@@ -239,7 +239,8 @@
     background-color: var(--first-color);
     opacity: 1;
   }
-  
+
+/*=============== MEDIA QUERIES ===============*/
   /* For small devices */
 @media screen and (max-width: 320px){
 
